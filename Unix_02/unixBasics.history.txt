@@ -1,0 +1,155 @@
+   18  more fav_chr_cuffdiff.txt 
+   19  head fav_chr_cuffdiff.txt 
+   22  grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt 
+   25  cat test.txt
+   26  cat test.txt 2>errors.txt
+   39  wget https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/sequences.nt.fa
+   40  ls
+   41  wc -l
+   42  wc -l sequences.nt.fa 
+   43  wc -c sequences.nt.fa 
+   44  wc -l sequences.nt.fa >report1.txt
+   45  wc -c sequences.nt.fa >> report1.txt
+   46  cat report1.txt 
+   47  man head
+   48  head -n 1 sequences.nt.fa 
+   49  head -n 1 sequences.nt.fa >>report1.txt
+   50  tail -n 3 sequences.nt.fa >>report1.txt
+   51  head sequences.nt.fa 
+   54  grep '>' sequences.nt.fa 
+   76  wget https://raw.githubusercontent.com/prog4biol/pfb2018/master/files/cuffdiff.txt
+   78  head cuffdiff.txt 
+  136  sort -g -r -k 10 cuffdiff.txt >sorted.cufdiff.out
+  137  head sorted.cufdiff.out 
+  138  head -n 100 sorted.cufdiff.out >top100.sorted.cuffdif.out
+  140  cut -f 1 top100.sorted.cuffdif.out | sort | cut -f 1 top100.sorted.cuffdif.out | sort | uniq >differentially.expressed.gemes.txt
+  141  wc -l differentially.expressed.gemes.txt 
+  142  echo '# PFB_problemsets' >>README.md
+  144  git init
+  145  git add README.md 
+  146  git commit -m "fist commit"
+  147  git remote add origin https://github.com/germaximus/PFB_problemsets.git
+  148  git push -u origin master
+  152  git add git_exercises.txt 
+  153  git commit -m 'added a line of text'
+  154  git push origin master
+  155  git clone https://github.com/germaximus/PFB_problemsets.git
+  180  rm git_exercises.txt 
+  181  rm report1.txt 
+  187  git add *
+  188  git commit
+  189  git commit -m
+  190  git commit -m 'more stuff'
+  191  git push
+  192  ls
+  193  cd ../
+  194  cd ./PFB_problemsets/
+  195  mkdir files
+  196  ls
+  197  cd ./files
+  198  cd ../
+  199  ls
+  200  mv cancer_genes.fasta ./files
+  201  cd ./files
+  202  ls
+  203  cd ../
+  204  git add files/cancer_genes.fasta 
+  205  git commit -m 'adding cancer_genes.fasta'
+  206  git push
+  207  nano mysequences.txt
+  208  cat mysequences.txt
+  209  git add mysequences.txt 
+  210  git reset mysequences.txt 
+  211  mv mysequences.txt ./files/
+  212  git add ./files/mysequences.txt 
+  213  git commit -m 'blabla'
+  214  git push
+  215  mkdir fasta
+  216  ls
+  217  mv fasta fastas
+  218  ls
+  219  cd ./files
+  220  ls
+  221  cd ../
+  222  cd ./files/
+  223  head cancer_genes.fasta 
+  224  cd ../
+  225  cd ./files/
+  226  ls
+  227  cp cancer_genes.fasta ../fastas/
+  228  cd../
+  229  cd ../
+  230  cd ./fastas/
+  231  ls
+  232  cd ../
+  233  cd ./files/
+  234  rm cancer_genes.fasta 
+  235  cd ../
+  236  git add all *
+  237  git add *
+  238  git commit -m "test"
+  239  git push
+  240  mkdir Unix_02
+  241  ls
+  242  mv fastas ./Unix_02
+  243  mv files ./Unix_02
+  244  mv top100.sorted.cuffdif.out ./Unix_02
+  245  mv sorted.cufdiff.out ./Unix_02
+  246  mv differentially.expressed.gemes.txt ./Unix_02
+  247  mv cuffdiff.txt ./Unix_02
+  248  ls
+  249  mv git_exercises.txt ./Unix_02
+  250  git add *
+  251  git commit -m ''
+  252  git commit -m 'test'
+  253  git push
+  254  ls
+  255  cd ../
+  256  git remote >seqName description
+  257  git remote https://github.com/germaximus/PFB_problemsets.git
+  258  ls
+  259  cd ./PFB_problemsets/
+  260  ls
+  261  httpscd ../
+  262  ls
+  263  cd ../
+  264  ls
+  265  git clone https://github.com/germaximus/PFB_problemsets.git
+  266  ls
+  267  rmdir PFB_problemsets/
+  268  ls
+  269  man rmdir
+  270  rmdir -p PFB_problemsets/
+  271  ls
+  272  cd ./P
+  273  cd ./PFB_problemsets/
+  274  ls
+  275  cd ../
+  315  git clone https://github.com/germaximus/PFB_problemsets.git
+  334  git add *
+  335  git commit -m "test"
+  336  git push
+  337  ls
+  338  git add -u
+  339  git commit -m "tr"
+  340  git push
+  341  ls
+  342  git rm cancer_genes.fasta 
+  343  git commit -m "test"
+  344  git push
+  345  git rm fastas
+  346  git rm -r fastas
+  347  git rm -r files
+  348  git commit -m "test"
+  349  git push
+  350  git rm top100.sorted.cuffdif.out 
+  351  git rm cuffdiff.txt 
+  352  git rm git_exercises.txt 
+  353  git rm sorted.cufdiff.out 
+  354  git commit -m "test"
+  355  git push
+  356  git rm differentially.expressed.genes.txt 
+  357  git commit -m "test"
+  358  git push
+  359  ls
+  360  history > ./Unix_02/unixBasics.history.txt
