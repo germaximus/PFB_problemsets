@@ -25,6 +25,6 @@ else:
 
 # fooling around with indentations
 # tabls and spaces cannot be mixed in the entire file, not only in a single script
-if value > 0: print("test1")
-else: print("test2_complete")
+#if value > 0: print("test1")
+#else: print("test2_complete")
 
