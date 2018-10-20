@@ -5,33 +5,33 @@
 import re
 
 fasta = input('Enter the name of the file ')
-FASTA = open(fasta, 'r')
+if not fasta.endswith(('.fasta','.fa', '.nt')): raise ValueError('Input is not in a fasta file format')
 
-seqs = {}
+try:
+  FASTA = open(fasta, 'r')
+except: print('File', fasta, 'does not exist')
+
 seq = ''
-previous_id = re.search(r'(^>\S*)\s*(.*)', FASTA.readline()).group(1)
+gene_name = ''
+gene_descr = ''
 
 for line in FASTA:
   line = line.rstrip()
-  match = re.search(r'(^>\S*)\s*(.*)', line)
+  match = re.search(r'(^>\S*)(\s*.*)', line)
   if match:
-    gene_id = match.group(1)
-    if len(seq) > 0:
-      A_count = seq.count('A')
-      T_count = seq.count('T')
-      G_count = seq.count('G')
-      C_count = seq.count('C')
-      seqs[previous_id] = {'A' : A_count, 'T' : T_count, 'G' : G_count, 'C' : C_count}
-      seq = ''
-      previous_id = gene_id
+     if len(seq) > 0:
+         print(gene_name, seq.count('A'), seq.count('T'), seq.count('G'), seq.count('C'))
+         A_count = seq.count('A')
+         T_count = seq.count('T')
+         G_count = seq.count('G')
+         C_count = seq.count('C')
+         gene_name = match.group(1).lstrip('>')
+         gene_descr = match.group(2)
+         seq = ''
   else:
     seq = seq + line
-
-seqs[previous_id] = {'A' : seq.count('A'), 'T' : seq.count('T'), 'G' : seq.count('G'), 'C' : seq.count('C')}
+print(gene_name, seq.count('A'), seq.count('T'), seq.count('G'), seq.count('C'))
 FASTA.close()
-
-for key in seqs:
-  print(key, seqs[key]['A'], seqs[key]['T'], seqs[key]['G'], seqs[key]['C'])
 
 
 

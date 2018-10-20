@@ -10,7 +10,7 @@ def percentGC (sequence):
 
 # Reverse complement
 def revComp_sequence (sequence):
-  sequence = sequence.lower().replace('a','A').replace('t','T').replace('g','G').replace('c','C')
+  sequence = sequence.lower().replace('a','T').replace('t','A').replace('g','C').replace('c','G')
   sequence = sequence[::-1]
   return(sequence)
 
