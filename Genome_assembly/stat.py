@@ -7,19 +7,16 @@ fasta_dict = SeqIO.to_dict(SeqIO.parse('ecoliPB-filtered_0.50.contigs.fasta', 'f
 
 
 genome_size = 0
-contig_stats = {}
+contigs = []
 contig_number = 0
 
 for record in fasta_dict:
-   contig_stats[str(len(fasta_dict[record].seq))] = record
+   contigs.append(len(fasta_dict[record].seq))
    genome_size += len(fasta_dict[record].seq)
    contig_number += 1
 
-contigs = list(contig_stats.keys())
-for i in range(len(contigs)):  contigs[i] = int(contigs[i])
-
-print('Shortest Contig ID:', contig_stats[str(min(contigs))], 'Nucleotide length', min(contigs))
-print('Longest Contig ID:', contig_stats[str(min(contigs))], 'Nucleotide length', max(contigs))
+print('Shortest Contig:', min(contigs))
+print('Longest Contig:', max(contigs))
 print('Genome Size:', genome_size)
 
 contigs.sort()
