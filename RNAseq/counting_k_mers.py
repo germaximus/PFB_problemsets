@@ -20,7 +20,7 @@ for line in FILE:
 
 #sort kmers by frequency
 kmers = sorted(kmers.items(), key = lambda x: x[1], reverse = True)
-kmers = kmers[1:10]
+kmers = kmers[0:10]
 for element in kmers:
   print (element[0], element[1])
    
