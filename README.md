@@ -1,1 +1,1 @@
-# PFB_problemsets
+# Programming for Biology Workshop, CSHL (2018)
